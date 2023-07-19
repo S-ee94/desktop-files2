@@ -1,0 +1,39 @@
+
+Logistic Regression Summary
+
+1.  Import data. Check if your Y is cat/cont. If it is cont, lin reg, cat => logistic
+2.  Check for missing values  --> Impute/Remove ( mean/median/mode ) 
+3.  Check for outliers -- > Impute/Remove
+4.  Check SD of every X1, X2, X3, X4 . if SD ~ 0 , then drop the feature
+5.  Var significance --> Chisq test if p>0.05 , then drop the feature
+6.  Var significance --> IV ( WOE )  if IV < 0.1 , then drop the feature
+7.  Shortlist features based on steps 2,3,4,5,6
+8.  Check multicollinearity using VIF
+9.  Drop features with VIF > 5 one by one to arrive at the final list of features
+10. Split the data into train and test
+11. Model fitting/training
+12. Check for p -values and further drop insignicant features with p > .05
+13. Fit the model again
+14. Model Validation - Acc, sens , spec
+15. Need to check the cutoff - ROC table and ROC Curve. Make sure your AUC is > 0.7
+16. Use the ROC table to find the cutoff - you can use different weightages for sens and 
+spec based on the business scenario
+17. Check Concordance and discordance
+
+Linear Regression Summary
+
+1.  Import data. Check if your Y is cat/cont. If it is cont, lin reg, cat => logistic
+2.  Check for missing values  --> Impute/Remove ( mean/median/mode ) 
+3.  Check for outliers -- > Impute/Remove
+4.  Check for linearity -> decide on transformations 
+5.  Check SD of every X1, X2, X3, X4 . if SD ~ 0 , then drop the feature
+6.  Var significance --> Correlation if p>0.05 , then drop the feature
+7.  Shortlist features based on steps 2,3,4,5,6
+8.  Check multicollinearity using VIF
+9.  Drop features with VIF > 5 one by one to arrive at the final list of features
+10. Split the data into train and test
+11. Model fitting/training
+12. Check for p -values and further drop insignificant features with p > .05
+13. Fit the model again
+14. Model Validation - Adj R2, RMSE, MAPE
+15. Error Assumptions - Normal, const var, random - no pattern  
